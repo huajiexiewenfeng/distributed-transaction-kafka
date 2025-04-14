@@ -1,6 +1,8 @@
 server:
   port: 7070
 spring:
+  profiles:
+    active: dev
   datasource:
     url: jdbc:mysql://localhost:3306/test_db
     username: root
@@ -26,3 +28,9 @@ spring:
     listener:
       missing-topics-fatal: false
       ack-mode: MANUAL_IMMEDIATE
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # XML映射文件位置
+  type-aliases-package: com.csdn.dt.kafka.model   # 实体类包路径
+  configuration:
+    map-underscore-to-camel-case: true      # 开启驼峰命名转换
