@@ -10,13 +10,13 @@ public class TxEvent extends ApplicationEvent {
 
     private final Long buyerId;
 
-    private final Long amount;
+    private final Integer amount;
 
     public TxEvent() {
         this("", null, null, null, null);
     }
 
-    public TxEvent(Object source, Long txId, Long sellerId, Long buyerId, Long amount) {
+    public TxEvent(Object source, Long txId, Long sellerId, Long buyerId, Integer amount) {
         super(source);
         this.txId = txId;
         this.sellerId = sellerId;
@@ -36,7 +36,7 @@ public class TxEvent extends ApplicationEvent {
         return buyerId;
     }
 
-    public Long getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 }

@@ -1,6 +1,5 @@
 package com.csdn.dt.kafka.mapper;
 
-import com.csdn.dt.kafka.model.Transaction;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
